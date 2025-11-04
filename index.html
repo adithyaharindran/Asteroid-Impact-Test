@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asteroid Impact Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Asteroid Impact Simulation</h1>
+      <div class="controls">
+        <label>Diameter: <span id="diameterValue">1000</span> m</label>
+        <input type="range" id="diameterSlider" min="10" max="10000" value="1000" step="10" />
+        <label>Velocity: <span id="velocityValue">20</span> km/s</label>
+        <input type="range" id="velocitySlider" min="5" max="100" value="20" step="1" />
+        <label>Angle: <span id="angleValue">45</span>°</label>
+        <input type="range" id="angleSlider" min="15" max="90" value="45" step="1" />
+        <label>Density: <span id="densityValue">3300</span> kg/m³</label>
+        <input type="range" id="densitySlider" min="500" max="8000" value="3300" step="50" />
+      </div>
+    </header>
+    <div class="main-content">
+      <div id="threeContainer"></div>
+      <div id="map"></div>
+      <div id="dataPanel"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
